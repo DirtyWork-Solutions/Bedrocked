@@ -1,0 +1,1 @@
+from bedrocked.config.meta_conf import BASE_CONF

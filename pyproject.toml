@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bedrocked"
+version = "0.1.0"
+description = "Foundation library offering essential utilities for configuration, logging, error handling, and more."
+authors = [
+    {name = "DirtyWork Solutions Limited", email = "bedrocked@open.dirtywork.solutions"}
+]
+license = {file = "LICENSE.md"}
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "pyforged~=0.2.0",
+    "loguru~=0.7.3",
+    "omegaconf~=2.30"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Framework :: Pytest",
+    "Framework :: Pydantic",
+    "Intended Audience :: Developers",
+    "Topic :: System",
+    "Topic :: System :: Logging",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Topic :: System :: Installation/Setup"
+]
+
+
+[project.urls]
+Homepage = "https://open.dirtywork.solutions/pyforged"
+Documentation = "https://github.com/DirtyWork-Solutions/Bedrocked/docs/INDEX.md"
+Source = "https://github.com/DirtyWork-Solutions/Bedrocked"
+Issues = "https://github.com/DirtyWork-Solutions/Bedrocked/tree/main/.github/ISSUE_TEMPLATE"
