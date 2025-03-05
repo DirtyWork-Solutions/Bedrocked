@@ -1,2 +1,5 @@
 setuptools~=75.8.2
 pyforged~=0.2.0
+omegaconf~=2.3.0
+loguru~=0.7.3
+cachetools~=5.5.2
