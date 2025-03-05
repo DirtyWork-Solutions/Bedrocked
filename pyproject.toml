@@ -39,7 +39,7 @@ classifiers = [
 
 
 [project.urls]
-Homepage = "https://open.dirtywork.solutions/pyforged"
+Homepage = "https://open.dirtywork.solutions/bedrocked"
 Documentation = "https://github.com/DirtyWork-Solutions/Bedrocked/docs/INDEX.md"
 Source = "https://github.com/DirtyWork-Solutions/Bedrocked"
 Issues = "https://github.com/DirtyWork-Solutions/Bedrocked/tree/main/.github/ISSUE_TEMPLATE"
