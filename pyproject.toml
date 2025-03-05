@@ -16,7 +16,7 @@ requires-python = ">=3.13"
 dependencies = [
     "pyforged~=0.2.0",
     "loguru~=0.7.3",
-    "omegaconf~=2.30"
+    "omegaconf~=2.3.0"
 ]
 
 classifiers = [
