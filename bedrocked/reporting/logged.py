@@ -2,10 +2,26 @@ import sys
 import traceback
 from loguru import logger
 import yaml
+import os
+
+DEFAULT_LOGGING_CONFIG = {
+    'handlers': [
+        {'sink': sys.stdout, 'level': 'INFO'},
+    ],
+    'extra': {}
+}
 
 def load_logging_config(config_file: str):
-    with open(config_file, 'r') as file:
-        config = yaml.safe_load(file)
+    """
+
+    :param config_file:
+    :return:
+    """
+    if os.path.exists(config_file):
+        with open(config_file, 'r') as file:
+            config = yaml.safe_load(file)
+    else:
+        config = DEFAULT_LOGGING_CONFIG
     return config
 
 def setup_logger(config_file: str):
