@@ -1,3 +1,7 @@
+"""
+
+"""
+
 import sys
 import traceback
 from loguru import logger
@@ -6,7 +10,7 @@ import os
 
 DEFAULT_LOGGING_CONFIG = {
     'handlers': [
-        {'sink': sys.stdout, 'level': 'INFO'},
+        {'sink': sys.stdout, 'level': 'DEBUG'},
     ],
     'extra': {}
 }
@@ -35,13 +39,14 @@ def log_exception(exc_type, exc_value, exc_traceback):
     if issubclass(exc_type, KeyboardInterrupt):
         sys.__excepthook__(exc_type, exc_value, exc_traceback)
         return
-    logger.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
+    logger.error("Uncaught exception", exc_info=(exc_type, exc_value, str(exc_traceback)))
 
 # Initialize logger with configuration
-setup_logger('logging_config.yaml')
+setup_logger('logging_config.yaml')  # TODO: Dynamically determine.
 
 # Set custom exception handler
 sys.excepthook = log_exception
 
-# Example usage
-logger.info("Logger is configured and ready to use.")
+if __name__ == '__main__':
+    # Example usage
+    logger.info("Logger is configured and ready to use.")
